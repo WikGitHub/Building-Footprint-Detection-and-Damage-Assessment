@@ -12,3 +12,5 @@ Identify building footprints within satellite and aerial images for evaluation o
 - [] GeoJSON file generation
 - [] Visulaisation
 - [] Damage assessment
+
+## TODO:
