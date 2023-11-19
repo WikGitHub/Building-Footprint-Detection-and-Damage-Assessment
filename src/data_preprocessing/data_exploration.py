@@ -51,6 +51,10 @@ def show_metadata():
     logging.info(f"Colour Channels: {image.shape}")
 
 
-if __name__ == "__main__":
+def main():
     visualise_dataset()
     show_metadata()
+
+
+if __name__ == "__main__":
+    main()
