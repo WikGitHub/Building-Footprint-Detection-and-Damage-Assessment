@@ -42,7 +42,10 @@ def save_images(images: list, output_directory: str, prefix: str = "") -> None:
     logging.info(f"Saving image(s).")
     os.makedirs(output_directory, exist_ok=True)
     for i, image in enumerate(images):
-        cv2.imwrite(os.path.join(output_directory, f"image_{prefix}{i + 1}.jpg"), (image * 255).astype(np.uint8))
+        cv2.imwrite(
+            os.path.join(output_directory, f"image_{prefix}{i + 1}.jpg"),
+            (image * 255).astype(np.uint8),
+        )
 
 
 def main():
@@ -53,6 +56,7 @@ def main():
     images = resize_image(images)
     images = normalise_images(images)
     save_images(images, output_directory)
+
 
 if __name__ == "__main__":
     main()

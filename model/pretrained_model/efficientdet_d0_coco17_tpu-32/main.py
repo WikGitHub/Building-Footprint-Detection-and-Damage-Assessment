@@ -5,12 +5,15 @@ import tensorflow as tf
 from src.common.load_images import load_images_from_directory
 
 MODEL = tf.saved_model.load(
-    "model/pretrained_model/efficientdet_d0_coco17_tpu-32/saved_model")
+    "model/pretrained_model/efficientdet_d0_coco17_tpu-32/saved_model"
+)
 
 CLASSES = ["background", "building", "car", "airplane"]
 
 
-def postprocess_detections(detections: dict, confidence_threshold: float = 0.1) -> tuple:
+def postprocess_detections(
+    detections: dict, confidence_threshold: float = 0.1
+) -> tuple:
     """
     Extract the boxes, scores, and classes from the detections.
     :param detections: the detections returned by the model.

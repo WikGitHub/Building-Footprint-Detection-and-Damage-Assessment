@@ -18,7 +18,12 @@ def visualise_dataset():
     try:
         plt.figure(figsize=(10, 5))
         plt.figtext(
-            0.5, 0.95, "Visualisation of given data.", fontsize=16, ha="center", color="black"
+            0.5,
+            0.95,
+            "Visualisation of given data.",
+            fontsize=16,
+            ha="center",
+            color="black",
         )
         for i in range(min(6, len(dataset))):
             plt.subplot(3, 5, i + 1)
