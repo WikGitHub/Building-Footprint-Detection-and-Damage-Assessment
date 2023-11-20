@@ -1,12 +1,12 @@
-import os
-import cv2
 import logging
+import os
 
+import cv2
 from matplotlib import pyplot as plt
 from matplotlib.image import imread
 
 logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler()])
-dataset_path = "./raw_data"
+dataset_path = ""
 dataset = os.listdir(dataset_path)
 
 
@@ -15,7 +15,6 @@ def visualise_dataset():
     Visualise images in the provided dataset.
     :return: visualisation of the dataset.
     """
-
     try:
         plt.figure(figsize=(10, 5))
         plt.figtext(
@@ -41,13 +40,9 @@ def show_metadata():
     """
 
     image = cv2.imread(os.path.join(dataset_path, dataset[0]))
-
     logging.info(f"Image Dimensionality: {image.ndim}")
-
     logging.info(f"Image Data Type: {image.dtype}")
-
     logging.info(f"Pixel Values:\n{image}")
-
     logging.info(f"Colour Channels: {image.shape}")
 
 
